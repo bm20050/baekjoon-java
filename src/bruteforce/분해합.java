@@ -2,7 +2,7 @@ package bruteforce;
 
 import java.util.Scanner;
 
-public class _2231 {
+public class 분해합 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -16,8 +16,9 @@ public class _2231 {
             }
             if (i + sum == n) {
                 System.out.println(i);
-                break;
+                return;
             }
         }
+        System.out.println(0);
     }
 }
