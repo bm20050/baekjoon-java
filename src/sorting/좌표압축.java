@@ -31,9 +31,11 @@ public class 좌표압축 {
                 map.put(b[i], v++);
             }
         }
-
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < a.length; i++) {
-            System.out.print(map.get(a[i]) + " ");
+            sb.append(map.get(a[i]) + " ");
         }
+
+        System.out.println(sb);
     }
 }
