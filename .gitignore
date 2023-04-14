@@ -29,4 +29,4 @@ bin/
 .DS_Store
 
 /.idea
-Baekjoon_Java.iml
+baekjoon-java.iml
