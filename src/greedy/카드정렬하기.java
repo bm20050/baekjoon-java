@@ -3,25 +3,26 @@ package greedy;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class 카드정렬하기 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        PriorityQueue<Long> pq = new PriorityQueue<>();
         int n = Integer.parseInt(br.readLine());
-        int[] arr = new int[n];
+
         for (int i = 0; i < n; i++) {
-            arr[i] = Integer.parseInt(br.readLine());
+            pq.offer(Long.parseLong(br.readLine()));
         }
 
-        Arrays.sort(arr);
+        long sum = 0;
+        while (pq.size() > 1) {
+            long c1 = pq.poll();
+            long c2 = pq.poll();
 
-        int sum = 0;
-
-        for (int i = 0; i < arr.length - 1; i++) {
-            sum += arr[i];
+            sum += c1 + c2;
+            pq.offer(c1 + c2);
         }
-        sum = sum * (arr.length - 1) + arr[arr.length - 1];
         System.out.println(sum);
     }
 }
