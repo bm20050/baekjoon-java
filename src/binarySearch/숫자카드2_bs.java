@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class 숫자카드2_binarySearch {
+public class 숫자카드2_bs {
 
     public static int upperBound(int[] arr, int target, int start, int end) {
         if (start >= end)
