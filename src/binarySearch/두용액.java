@@ -11,7 +11,7 @@ public class 두용액 {
     public static int ans1;
     public static int ans2;
 
-    public static void binarySearch(int[] arr, int start, int end) {
+    public static void find(int[] arr, int start, int end) {
         int result = Integer.MAX_VALUE;
         while (start < end) {
             int temp = Math.abs(arr[start] + arr[end]);
@@ -42,7 +42,7 @@ public class 두용액 {
 
         Arrays.sort(arr);
 
-        binarySearch(arr, 0, n - 1);
+        find(arr, 0, n - 1);
 
         System.out.println(ans1 + " " + ans2);
     }

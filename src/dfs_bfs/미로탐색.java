@@ -64,8 +64,7 @@ public class 미로탐색 {
         int[][] data = new int[n][m];
 
         for (int i = 0; i < n; i++) {
-            st = new StringTokenizer(br.readLine());
-            String s = st.nextToken();
+            String s = br.readLine();
             for (int j = 0; j < s.length(); j++) {
                 data[i][j] = s.charAt(j) - '0';
             }

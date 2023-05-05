@@ -8,18 +8,16 @@ import java.util.StringTokenizer;
 
 public class 예산 {
     public static int binarySearch(int[] arr, int target, int start, int end) {
+        if (start > end)
+            return end;
+
         int mid = (start + end) / 2;
         int sum = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] >= mid)
-                sum += mid;
-            else
-                sum += arr[i];
+        for (int j : arr) {
+            sum += Math.min(j, mid);
         }
 
         if (sum <= target) {
-            if (start > end)
-                return mid;
             return binarySearch(arr, target, mid + 1, end);
         } else {
             return binarySearch(arr, target, start, mid - 1);
