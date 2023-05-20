@@ -1,9 +1,9 @@
 package sorting;
 
-import java.util.Arrays;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 import java.util.StringTokenizer;
 
 public class 안테나 {
@@ -17,21 +17,6 @@ public class 안테나 {
         }
 
         Arrays.sort(arr);
-
-        int result = 0;
-        int min = Arrays.stream(arr).sum();
-        for (int i = 0; i < arr.length; i++) {
-            int temp = 0;
-            for (int j = 0; j < arr.length; j++) {
-                temp += Math.abs(arr[i] - arr[j]);
-            }
-            if (min > temp){
-                min = temp;
-                result = i;
-            }
-
-        }
-
-        System.out.println(arr[result]);
+        System.out.println(arr[(n - 1) / 2]);
     }
 }
