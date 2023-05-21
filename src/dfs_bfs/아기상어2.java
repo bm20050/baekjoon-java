@@ -26,8 +26,6 @@ public class 아기상어2 {
         }
     }
 
-    public static int[][] ans;
-
     public static int[] dx = {-1, -1, 0, 1, 1, 1, 0, -1};
     public static int[] dy = {0, 1, 1, 1, 0, -1, -1, -1};
     public static boolean[][] visited;
