@@ -54,7 +54,7 @@ public class 최소비용구하기 {
                 int idx = graph.get(now).get(i).getIndex();
                 if (cost < d[idx]) {
                     d[idx] = cost;
-                    pq.offer(new Node(graph.get(now).get(i).getIndex(), cost));
+                    pq.offer(new Node(idx, cost));
                 }
             }
         }
