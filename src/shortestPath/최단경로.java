@@ -51,9 +51,10 @@ public class 최단경로 {
                 continue;
             for (int i = 0; i < graph.get(now).size(); i++) {
                 int cost = d[now] + graph.get(now).get(i).getDistance();
-                if (cost < d[graph.get(now).get(i).getIndex()]) {
-                    d[graph.get(now).get(i).getIndex()] = cost;
-                    pq.offer(new Node(graph.get(now).get(i).getIndex(), cost));
+                int idx = graph.get(now).get(i).getIndex();
+                if (cost < d[idx]) {
+                    d[idx] = cost;
+                    pq.offer(new Node(idx, cost));
                 }
             }
         }
